@@ -51,7 +51,7 @@ def test_list_pets_no_result():
     mock_connection.session.all.assert_not_called()
     mock_connection.session.filter.assert_not_called()
     assert response == []
-def test_delete_pet_error():
+def test_delete_pets_error():
     mock_connection = MockConnectionNoResult()
     repo = PetsRepository(mock_connection)
     with pytest.raises(Exception):
